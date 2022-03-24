@@ -1,0 +1,27 @@
+.div_a{
+    background-color: #fc821e;
+    width: 500px;
+    height: 500px;
+}
+#div_b{
+    background-color: #a1ff78;
+    height: 250px;
+    width: 250px;
+}
+#parag{
+    color: white; 
+    background-color: red;
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: bold;
+}
+#div_d{
+    width: 50%;
+            height: 50vh;
+            background-color: rgb(143, 250, 250);
+}
+#div_e{
+    width: 75vw;
+    height: 25vh;
+    background-color: rgb(255, 0, 0);
+}
