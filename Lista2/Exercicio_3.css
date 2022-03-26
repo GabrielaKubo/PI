@@ -1,0 +1,30 @@
+.corpo{
+    background-color: #d3d3d3;
+}
+#div_b{
+    background-color: white;
+    height: 500px;
+    width: 50vw;
+    border: 10px dotted black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+#div_c{
+    background-color: yellow;
+    height: 50px;
+}
+#div_d{
+    background-color: rgb(255, 69, 0);
+    height: 100px;
+    width: 30%;
+}
+#div_e{
+    background-color: rgb(0, 128, 0);
+    color: white;
+    font-size: 30px;
+    padding: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
