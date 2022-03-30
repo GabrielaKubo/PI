@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+}
+
+.header{
+   border-bottom: 1px solid #32b9cd;
+}
+
+.container{
+    color: #32b9cd;
+    display: flex;
+    justify-content: space-between;
+}
+.container ul {
+    color: #e3b062;
+    display: flex;
+    width: 600px;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.header .container{
+    justify-content: space-around;
+    align-items: center;
+}
+ul a{
+    text-decoration: none;
+    color: #e3b062;
+}
+
+.agora{
+    font-weight: 600;
+}
+
+
+/*BANNER*/
+
+.banner{
+    height: 500px;
+    background-image: url("bg-jelly-fish-para-home.png");
+    background-size: cover;
+
+}
+
+.banner .container{
+    height: 500px;
+    align-items: center;
+
+}
+
+.banner p{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    width: 280px;
+    margin-left: 350px;
+}
+
+.banner span{
+    font-weight: 800;
+}
+
+/*LOGIN*/
+.banner .card{
+    background-color: beige;
+    height: 450px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.card {
+    margin-top: 20px;
+
+}
+.btn{
+    font-family: monospace;
+    margin-top: 10px;
+    border: 0;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #e75459;
+    cursor: pointer;
+}
+input{
+    height: 30px;
+    border: 1px solid #e75459;
+    border-radius: 4px;
+}
+
+/*Cadastro*/
+
+.banner .card_cadastro{
+    background-color: beige;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto; 
+    justify-content: space-evenly;
+}
+.card_cadastro {
+    margin-top: 20px;
+}
+.banner .cadastro_items{
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
