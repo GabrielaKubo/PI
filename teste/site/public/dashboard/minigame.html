@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/funcoes.js"></script>
+    <script src="carrosel.js"></script>
+    <link rel="stylesheet" href="minigame.css">
+</head>
+<body>
+    <div class="header_minigame">
+        <div class="div_logo">
+            <h1 class="japones-logo">ジブリと間 </h1>
+            <h1 class="logo_romaji">Ghibli & MA</h1>
+        </div>
+        <ul>
+            <li class="#"><a href="info.html">Info</a> </li>
+            <li class="now" ><a href="Filmografia.html">Filmografia</a> </li>
+            <li class="#"><a href="Votacao.html">Votação</a> </li>
+            <li class="#"><a href="minigame.html">Minigame</a></li>
+            <li><a>|</a> </li>
+            <li class="#" id="Sair" onclick="limparSessao()"><a href="">Sair</a> </li>
+        </ul>
+    </div>
+    <div class="banner_minigame">
+        <div id="game_img" class="img_game">
+            <img id="chihiro_img" src="galeria-filmes/chihiro.gif" alt="" style="display: block;">
+            <img  id="totoro_img" src="galeria-filmes/totoro.gif" alt="" style="display: none;">
+            <img id="mononoke_img" src="galeria-filmes/mononoke.gif" alt="" style="display: none;">
+            <img id="ponyo_img" src="galeria-filmes/ponyo.gif" alt="" style="display: none;">
+        </div>
+        <select  id="sel_game" class="select_game">
+            <option value="1">Chihiro</option>
+            <option value="2">Mononoke</option>
+            <option value="3">Ponyo</option>
+            <option value="4">Totoro</option>
+        </select>
+        <button class="btn_minigame" onclick="jogo()">Confirmar</button>
+    </div>
+   
+</body>
+</html>
+<script>
+    var escolha;
+        function jogo(){
+        var escolha = sel_game.value;
+        var imagem= []
+        for(var index = 0; index < 4; index++){
+            if(index == 0 &&  escolha == 1){
+                alert('Parabéns');
+                chihiro_img.style.display = "none";
+                totoro_img.style.display = "block";
+                mononoke_img.style.display = "none";
+                ponyo_img.style.display = "none";
+               
+            }
+            else if(index == 1 && escolha == 4){
+                alert('Parabéns');
+                chihiro_img.style.display = "none";
+                totoro_img.style.display = "none";
+                mononoke_img.style.display = "block";
+                ponyo_img.style.display = "none";
+            }
+            else if(index == 2 && escolha == 2){
+                alert('Parabéns');
+                chihiro_img.style.display = "none";
+                totoro_img.style.display = "none";
+                mononoke_img.style.display = "none";
+                ponyo_img.style.display = "block";
+                break
+            }
+            else if(index == 3 && escolha == 3){
+                alert('Parabéns');
+                chihiro_img.style.display = "none";
+                totoro_img.style.display = "none";
+                mononoke_img.style.display = "none";
+                ponyo_img.style.display = "none";
+                break
+            }else{
+                alert('tente novamente')
+                return false
+            }
+        }
+    }
+    
+        
+</script>

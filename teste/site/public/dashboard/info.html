@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="info.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <script src="../js/funcoes.js"></script>
+</head>
+<body   onload="validarSessao(), atualizarFeed()">
+    <div class="banner_info">
+        <div class="header_inicio">
+            <div class="div_logo">
+                <h1 class="japones-logo">ジブリと間 </h1>
+                <h1 class="logo_romaji">Ghibli & MA</h1>
+            </div>
+            <ul>
+                <li class="now"><a href="info.html">Info</a> </li>
+                <li class="#" ><a href="Filmografia.html">Filmografia</a> </li>
+                <li class="#"><a href="Votacao.html">Votação</a> </li>
+                <li class="#"><a href="minigame.html">Minigame</a></li>
+                <li><a>|</a> </li>
+                <li class="#" id="Sair" onclick="limparSessao()"><a href="">Sair</a> </li>
+            </ul>
+        </div>
+
+        <div class="info_container">
+            <div class="info">
+                <h1 class="titulo">Suas Informações</h1>
+                <div class="info_conteudo">
+                    <div id="image_gif">
+                        <img class="jiji" src="galeria-filmes/jiji.gif" alt="">
+                    </div>
+                    <div class="info_dados">
+                        Nome: <span id="nomeUsuario"></span><br>
+                        Email: <span id="emailUsuario"></span><br>
+                        Filme Favorito: <span id="nomeFilme"></span><br>
+                        Personagem Favorito: <span id="nomePersonagem"></span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+<script>
+     let proximaAtualizacao;
+
+window.onload = obterDadosGrafico(1);
+nomeUsuario.innerHTML = sessionStorage.NOME_USUARIO;
+emailUsuario.innerHTML = sessionStorage.EMAIL_USUARIO;
+nomeFilme.innerHTML = sessionStorage.FILME_USUARIO;
+nomePersonagem.innerHTML = sessionStorage.PERSONAGEM_USUARIO;
+verificar_autenticacao();
+
+
+</script>

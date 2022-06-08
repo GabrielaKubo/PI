@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.header_inicio{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+ }
+ .header{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 15%;
+    width: 100vw;
+    padding: 20px;
+ }
+ .header_inicio .div_logo{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+    color: white;
+    width: 20vw;
+    line-height: 0;
+ }
+ .logo_romaji{
+    font-size: 20px;
+    
+ }
+ .header_inicio ul{
+    margin-left: 30vw;
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+ 
+ }
+ li{
+    list-style: none;
+ }
+ a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+ }
+ .banner_info{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("galeria-filmes/wallpaperflare.com_wallpaper\ \(2\).jpg");
+    background-size: cover;
+ }
+
+.info_container{
+   height:  85%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+ .info{
+    background-color: rgb(0, 0, 0);
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   border-radius: 14px;
+   color: white;
+ }
+ h1{
+    padding: 0;
+ }
+ .info_conteudo{
+   display: flex;
+   width: 100%;
+   justify-content: space-evenly;
+   margin-bottom: 5%;
+ }
+ .info_dados{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+ }
+ .titulo{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5%;
+ }
+ .info{
+    font-size: 20px;
+ }
+ .image_gif{
+    height: 100%;
+    width: 50%;
+    
+ }

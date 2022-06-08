@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+input{
+    outline: 0;
+    border: none;
+    border-radius: 14px;
+    padding: 10px;
+}
+/* input:focus {
+    border: 3px solid #555;
+    border-radius: 14px;
+  } */
+  a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;  
+  }
+a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vh;
+    width: 100vw;
+}
+.div_logo{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 20%;
+    line-height: 0.2;
+}
+.japones-logo{
+    color: white;
+}
+.logo_romaji{
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+}
+.header ul{
+    margin-left: 30vw;
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* CADASTRO */
+.banner-cadastro{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("galeria/howl.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cadastro-card{
+    margin-top: 3%;
+    height: 85%;
+    width: 30%;
+    border: 2px solid #51a7b6;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #51a7b6;
+}
+.cadastro-container{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.foto-cadastro{
+    height: 20vh;
+    margin-bottom: 15vh;
+   
+}
+h1{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 20%;
+    
+}
+p{
+    color: white;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 0.1;
+}
+.cadastro-end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 30%;
+    margin-left: 44%;
+}
+.btn_cadastro{
+   border-radius: 40px;
+   border: 1px solid #abbe6c;
+    height: 30%;
+    width: 40%;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    margin-bottom: 20%;
+}
+.btn_cadastro:hover{
+    background-color: #abbe6c;
+    color: white;
+}
+.erro_card{
+   padding: 20px;
+    font-size: 15px;
+    background-color: black;
+    border: 2px solid red;
+    color: white;
+    border-radius: 40px;
+}
+.erro_card #erro{
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px;
+  }
+  .sel_FilmePerso{
+      display: flex;
+      width: 80%;
+      justify-content: center;
+      align-items: center;
+  }
+  select{
+      width: 40%;
+  }
+  /* FOOTER */
+.footer_page{
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color:#B9C297;
+}
+img{
+   
+    height: 40px;
+    cursor: pointer;
+}

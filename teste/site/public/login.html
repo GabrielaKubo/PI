@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="div_logo">
+            <h1 class="japones-logo">ジブリと間 </h1>
+            <h1 class="logo_romaji">Ghibli & MA</h1>
+        </div>
+        <ul>
+            <li class="under"><a href="index.html#home">Home</a> </li>
+            <li class="grow" ><a href="index.html#sobre">Sobre</a> </li>
+            <li class="grow"><a href="index.html#estudio">Estúdio</a> </li>
+            <li><a href="index.html#hayao_miyazaki">Miyazaki</a></li>
+            <li><a>|</a> </li>
+            <li class="grow" id="cadastro"><a href="cadastro.html">Cadastro</a> </li>
+            <li class="grow" id="login"><a href="login.html">Login</a> </li>
+        </ul>
+    </div>
+    <div class="banner-login">
+        <div class="card-login">
+            <h1>Login</h1>
+            <p>E-mail:</p> 
+            <input type="text" id="ipt_login_email" class="login_email" placeholder="Insira seu e-mail">
+            <p>Senha</p>
+            <input type="password" id="ipt_login_senha" class="login_senha" placeholder="Insira sua senha"> <br>
+            <button onclick="entrar()" class="btn_login">Entrar</button>
+        </div>
+        <div id="erro_login" class="erro-login" style="display: none;"></div>
+    </div>
+    <div id="footer" class="footer_page">
+        <div id="instagram_logo" class="insta_logo" onclick="change_window()">
+            <img src="css/galeria/logotipo-do-instagram.png" alt="">
+        </div>
+        <div>Feito com carinho por um aluno da SPTech.</div>
+    </div>
+</body>
+</html>
+<script>
+    function entrar(){
+        var emailVar = ipt_login_email.value;
+        var senhaVar = ipt_login_senha.value;
+        if(emailVar == "" || senhaVar == ""){
+            erro_login.style.display = 'block';
+            erro_login.innerHTML = `Por favor preencha todos os campos corretamente`
+        }else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1){
+            erro_login.style.display = 'block';
+            erro_login.innerHTML = `Email inválido`
+        }
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nomeUser;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.FILME_USUARIO = json.nomeFilme;
+                    sessionStorage.PERSONAGEM_USUARIO = json.nomePersonagem;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/info.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Erro ao realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+</script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <script src="js/textosIndex.js"></script>
+</head>
+<body>
+    
+    <div id="full-page" class="container">
+        <div class="header">
+                <div class="div_logo">
+                    <h1>ジブリと間 </h1>
+                    <h1 class="logo_romaji">Ghibli & MA</h1>
+                </div>
+                <ul>
+                    <li class="under" ><a href="#home">Home</a> </li>
+                    <li class="grow" ><a href="#sobre">Sobre</a> </li>
+                    <li class="grow"><a href="#estudio">Estúdio</a> </li>
+                    <li><a href="#hayao_miyazaki">Miyazaki</a></li>
+                    <li><a>|</a> </li>
+                    <li class="grow" id="cadastro"><a href="cadastro.html">Cadastro</a> </li>
+                    <li class="grow" id="login"><a href="login.html">Login</a> </li>
+                </ul>
+        </div>
+        <div id="home" class="banner-home">
+            <div id="home_Kanji" class="ma-kanji"> </div>
+            <div id="home_Romaji" class="romaji"></div>
+            <div id="home_subtitulo" class="subtitulo"></div>
+        </div>
+        <div id="sobre" class="banner-sobre">
+            <div id="sobre_info" class="div_sobre-info">
+            <div id="sobre_titulo" class="div_sobre-titulo"></div> <br><br>
+            <div id="sobre_texto" class="div_sobre-texto">
+                    
+
+            </div>
+        </div>
+        </div>
+        <div id="estudio" class="banner-estudio">
+            <div id="estudio_kanji" class="estudio-logo"></div> <br>
+                <div id="estudio_historia" class="historia-texto"></div>
+        </div>
+        <div id="hayao_miyazaki" class="Hayao" >
+            <div id="foto" class="hayao_foto"> 
+                <img src="css/galeria/miyazaki.jpg" alt="" class="foto_miyazaki">
+            </div>
+            <div id="hayao_info" class="info_hayao">
+                <div id="titulo_hayao" class="titulo_miyazaki"></div> <br>
+                <div id="miyazaki_frase" class="miyazaki_frase"></div> <br><br>
+                <div class="info_conteudo">
+                    <div id="nascimento" class="Nascimento"></div>
+                    <div id="local" class="Local"></div>
+                    <div id="ocupacao" class="ocup"></div>
+                    <div id="influencia" class="influencias"></div>
+                    <div id="carreira" class="Miyazaki_carreira"></div><br>
+                    <div class="fatos" id="hayao_fatos"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="footer_page">
+            <div id="instagram_logo" class="insta_logo" onclick="change_window()">
+                <img src="css/galeria/logotipo-do-instagram.png" alt="">
+            </div>
+            <div>Feito com carinho por um aluno da SPTech.</div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    home_Kanji.innerHTML =  frases_home[0].texto;
+    home_Romaji.innerHTML = frases_home[1].texto;
+    home_subtitulo.innerHTML = frases_home[2].texto;
+    sobre_titulo.innerHTML = frases_sobre[0].texto;
+    sobre_texto.innerHTML = frases_sobre[1].texto;
+    estudio_kanji.innerHTML = frases_estudio[0].texto;
+    estudio_historia.innerHTML = frases_estudio[1].texto;
+    titulo_hayao.innerHTML = miyazaki[0].texto;
+    miyazaki_frase.innerHTML = miyazaki[1].texto;
+    nascimento.innerHTML = miyazaki[2].texto;
+    local.innerHTML = miyazaki[3].texto;
+    ocupacao.innerHTML = miyazaki[4].texto;
+    influencia.innerHTML = miyazaki[5].texto;
+    carreira.innerHTML = miyazaki[6].texto;
+    hayao_fatos.innerHTML = miyazaki[7].texto;
+function change_window(){
+    window.location.assign("https://www.instagram.com/invites/contact/?i=h7jnwu2i36xw&utm_content=3uxz4j");
+}
+</script>

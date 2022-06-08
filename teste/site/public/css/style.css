@@ -1,0 +1,230 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+.html{
+    scroll-behavior: smooth;
+}
+div:target{
+    scroll-margin-top: .10em
+}
+a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;  
+  }
+a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vh;
+    width: 100vw;
+}
+.header .div_logo{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+    color: white;
+    width: 20vw;
+    line-height: 0.2;
+}
+.logo_romaji{
+    font-size: 20px;
+    
+}
+.header ul{
+    margin-left: 30vw;
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+/* HOME */
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.banner-home{
+    width: 100%;
+    height: 100%;
+    background-image: url("galeria/chihiro-opacidade.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.ma-kanji{
+    margin-top: 30vh;
+    margin-left: 5vw;
+    padding-bottom: 0%;
+    width: 60%;
+    height: 30%;
+    color: white;
+    font-size: 150px;
+}
+.romaji{
+    margin-left: 20vw;
+    font-size: 50px;
+    color: white; 
+}
+.subtitulo{
+    
+    margin-left: 10vw;
+    width: 50vw;
+    color: white;
+    font-size: 30px;
+}
+/* SOBRE */
+.banner-sobre{
+    height: 100vh;
+    width: 100vw;
+    background-color: #92b676;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    background-image: url("galeria/arietty.jpg");
+    background-size: cover;
+
+}
+.div_sobre-info{
+    margin-left: 5vw;
+    margin-top: 10vh;
+    height: 60vh;
+    width: 60vw;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+.div_sobre-titulo{
+    margin-top: 5vh;
+    font-size: 30px;
+    height: 10vh;
+    width: 50vw;
+    color: white;
+}
+.div_sobre-texto{
+    height: 90%;
+    width: 90%;
+    font-size: 18px;
+    color: white;   
+
+}
+/* ESTUDIO */
+.banner-estudio{
+    height: 100vh;
+    background-image: url("galeria/totoro.jpg");
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.historia-texto{
+    margin-left: 5%;
+    height: 50%;
+    width: 40%;
+    color: white;
+    font-size: 20px;
+}
+.estudio-logo{
+    margin-top: 8%;
+    margin-left: 5%;
+    font-size: 40px;
+    color: white;
+}
+/* banner MIYAZAKI */
+.Hayao{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+.hayao_foto{
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+.foto_miyazaki{
+    height: 100%;
+   
+}
+.info_hayao{
+    margin-top: 5%;
+    height: 80%;
+    width: 40%;
+    margin-left: -10%;
+    display: flex;
+    flex-direction: column;
+}
+.titulo_miyazaki{
+    font-size: 30px;
+    font-weight: 600;
+}
+.miyazaki_frase{
+    font-size: 20px;
+}
+.info_conteudo{
+    margin-top: 10%;
+    height: 40%;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/* FOOTER */
+.footer_page{
+    height: 15%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color:#B9C297;
+}
+img{
+   
+    height: 40px;
+    cursor: pointer;
+}
