@@ -5,7 +5,6 @@ body{
     overflow-x: hidden;
 }
 input{
-    outline: 0;
     border: none;
     height: 20px;
     width: 70%;
@@ -117,13 +116,13 @@ p{
     line-height: 0.1;
 }
 .btn_login{
-    margin-bottom: 5vh;
     border-radius: 40px;
     border: 1px solid #3d493f;
      height: 8vh;
      width: 10vw;
      font-size: 20px;
      transition-duration: 0.4s;
+     margin-bottom: 20px;
  }
  .btn_login:hover{
      background-color: #abbe6c;
@@ -142,6 +141,15 @@ p{
      font-size: 20px;
      margin: 10px;
    }
+   .loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+  }
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
 /* FOOTER */
 .footer_page{
     height: 15vh;

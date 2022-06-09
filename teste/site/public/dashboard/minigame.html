@@ -8,8 +8,9 @@
     <script src="../js/funcoes.js"></script>
     <script src="carrosel.js"></script>
     <link rel="stylesheet" href="minigame.css">
+    <link rel="shortcut icon" href="galeria-filmes/icon.png" type="image/x-icon">
 </head>
-<body>
+<body  onload="validarSessao()">
     <div class="header_minigame">
         <div class="div_logo">
             <h1 class="japones-logo">ジブリと間 </h1>
@@ -39,10 +40,14 @@
         </select>
         <button class="btn_minigame" onclick="jogo()">Confirmar</button>
     </div>
-   
+    <div id="footer" class="footer_page">
+        <div>Feito com carinho por um aluno da SPTech.</div>
+        <div class="by">By: Gabriela Akemi Kubo</div>
+    </div>
 </body>
 </html>
 <script>
+    // ARRUMAR
     var escolha;
         function jogo(){
         var escolha = sel_game.value;

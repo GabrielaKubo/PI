@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   overflow-x: hidden;
-  overflow-y: hidden;
+ 
     }
     a {
       position: relative;
@@ -99,6 +99,7 @@ a{
    justify-content: flex-start;
 }
 select{
+   padding: 10px;
    width: 30%;
    margin-left: 35%;
    font-size: 20px;
@@ -128,5 +129,21 @@ width: 20%;
 .container{
    height: 50%;
 }
-    
+ /* FOOTER */
+.footer_page{
+   height: 10vh;
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   justify-content: space-evenly;
+   font-size: 20px;
+   background-color:#030303;
+   color: white;
+}
+
+.by{
+   font-size: 15px;
+}
    

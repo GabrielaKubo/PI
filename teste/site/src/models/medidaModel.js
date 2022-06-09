@@ -69,7 +69,7 @@ function obterdadosdaKPI(idUsuario) {
                 JOIN Filmes as f 
                     on u.fkFilmes=f.idFilmes 			
             group by fkFilmes 
-            order by voto desc limit 1;`;
+            order by top1 desc limit 1;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

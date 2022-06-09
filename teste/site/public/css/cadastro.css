@@ -168,13 +168,19 @@ p{
   }
   .sel_FilmePerso{
       display: flex;
-      width: 80%;
+      width: 100%;
       justify-content: center;
       align-items: center;
+      justify-content: space-evenly;
   }
-  select{
-      width: 40%;
+  
+  .selfilme, .selperso{
+    width: 40%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
   }
+  
   /* FOOTER */
 .footer_page{
     height: 15vh;

@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
 }
 a {
    position: relative;
@@ -82,6 +83,20 @@ a:before {
      flex-direction: column;
      align-items: center;
      justify-content: center;
+     background-image: url("galeria-filmes/chihiro_varanda.jpg");
+     background-size: cover;
+     /* color: white; */
+ }
+ .voto_conteudo{
+    height: 95%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.822);
+    border:5px solid black;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
  }
  .graficos{
     height: 60%;
@@ -90,12 +105,13 @@ a:before {
     justify-content: space-evenly;
  }
  .canvas_grafico{
-     height: 60%;
-     width: 50%;
+     height: 50%;
+     width: 40%;
  }
  .graph{
-    width: 50%;
-    height: 50%;
+    width: 90%;
+    height: 100%;  
+   
  }
  .cards{
     height: 30%;
@@ -106,32 +122,54 @@ a:before {
     justify-content: space-evenly;
  }
 .card_total{
-   background-color: rebeccapurple;
+   background-color: #298b5a;
    border-radius: 14px;
    height: 60%;
-   width: 20%;
+   width: 30%;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    font-size: 25px;
+   padding: 10px;
+}
+.nome_filme{
+   font-size: 20px;
 }
 .top1{
-   background-color: red;
+   background-color: #e0368b;
    border-radius: 14px;
    height: 60%;
-   width: 20%;
+   width: 30%;
    display: flex;
    align-items: center;
    flex-direction: column;
    justify-content: center;
    font-size: 25px;
+   padding: 10px;
+  
+}
+.top1_filme{
+   font-size: 30px;
 }
 p{
-   height: 40%;
-   width: 100%;
+   margin: 2px;
+}
+/* FOOTER */
+.footer_page{
+   height: 10vh;
+   width: 100vw;
    display: flex;
-   align-items: center;
+   flex-direction: column;
    justify-content: center;
+   align-items: center;
+   justify-content: space-evenly;
+   font-size: 20px;
+   background-color:#030303;
+   color: white;
 }
 
+.by{
+   font-size: 15px;
+}
+   

@@ -1,39 +1,40 @@
+obterdados();
+obterdadosdaKPI();
 MostrarKPI();
-function atualizacaoPeriodica() {
-    obterdados(1);
-    obterdados(2);
-    obterdados(3);
-    obterdados(4);
+// function atualizacaoPeriodica() {
+//     obterdados(1);
+//     obterdados(2);
+//     obterdados(3);
+//     obterdados(4);
 
-    function sendData() {
-        var http = new XMLHttpRequest();
-        http.open('POST', 'http://localhost:3000/api/sendData', false);
-        http.send(null);
-    }
+//     function sendData() {
+//         var http = new XMLHttpRequest();
+//         http.open('POST', 'http://localhost:3000/api/sendData', false);
+//         http.send(null);
+//     }
 
-    setInterval(() => {
-        sendData();
-    }, 2000);
-    setTimeout(atualizacaoPeriodica, 5000);
-}
+//     setInterval(() => {
+//         sendData();
+//     }, 2000);
+//     setTimeout(atualizacaoPeriodica, 5000);
+// }
 
-var total = 0;
+var totalfilme = 0;
 function obterdados(idUsuario) {
     fetch(`/medidas/tempo-real/${idUsuario}`)
         .then(resposta => {
-
+            console.log('teste')
             if (resposta.ok) {
                 resposta.json().then(resposta => {
 
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
-                    var dados = {
-                        temperatura: resposta[0].temperatura,
-                    }
+                    // var dados = {
+                    //     temperatura: resposta[0].temperatura,
+                    // }
 
-                    total = resposta[0].temperatura
-                    console.log('aaaa'+ total);
-                    mostrarKPI(total);
+                    totalfilme = resposta[0].temperatura;
+                    mostrarKPI();
                 });
             } else {
 
@@ -45,23 +46,25 @@ function obterdados(idUsuario) {
         });
 
 }
-var top = 0;
+var mostrar = 0;
+var mostrarfilme = 0;
 function obterdadosdaKPI(idUsuario) {
     fetch(`/medidas/dados-KPI/${idUsuario}`)
         .then(resposta => {
-
+            
             if (resposta.ok) {
                 resposta.json().then(resposta => {
 
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    console.log("retorna assim"+JSON.stringify(resposta));
+                    mostrar = resposta[0].top1;
+                    mostrarfilme = resposta[0].nomeFilme;
+                    console.log(mostrar);
 
-                    var dados = {
-                        top1: resposta[0].top1,
-                    }
+    
+                    MostrarKPI();
 
-                    total = resposta[0].top1
-                    console.log('aaaa'+ top);
-                    mostrarKPI(top);
+                    
                 });
             } else {
 
@@ -71,10 +74,10 @@ function obterdadosdaKPI(idUsuario) {
         .catch(function (error) {
             console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
         });
-
+        // proximaAtualizacao = setTimeout(() => obterdadosdaKPI(idUsuario), 2000);
 }
 
-function MostrarKPI(temperatura) {
+function MostrarKPI() {
     var limites = {
         muito_quente: 23,
         quente: 22,
@@ -83,31 +86,11 @@ function MostrarKPI(temperatura) {
         muito_frio: 5
     };
 
-    var classe_temperatura = 'cor-alerta';
-
-    if (temperatura >= limites.muito_quente) {
-        classe_temperatura = 'cor-alerta perigo-quente';
-        console.log("caiu no 1")
-    }
-    else if (temperatura < limites.muito_quente && voto >= limites.quente) {
-        classe_temperatura = 'cor-alerta alerta-quente';
-        console.log("caiu no 2")
-    }
-    else if (temperatura < limites.quente && voto > limites.frio) {
-        classe_temperatura = 'cor-alerta ideal';
-        console.log("caiu no 3")
-    }
-    else if (temperatura <= limites.frio && voto > limites.muito_frio) {
-        classe_temperatura = 'cor-alerta alerta-frio';
-        console.log("caiu no 4")
-    }
-    else if (temperatura < limites.min_temperatura) {
-        classe_temperatura = 'cor-alerta perigo-frio';
-        console.log("caiu no 5")
-    }
-    temp_aquario_1.innerHTML = total;
-    top1.innerHTML = top;
+    total_votos.innerHTML = totalfilme;
+    primeiro_lugar.innerHTML = mostrar;
+    nome_filme.innerHTML = mostrarfilme;
     var card;
+    
 
     // if (idUsuario == 1) {
        

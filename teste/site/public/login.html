@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <script src="js/login.js"></script>
+    <link rel="shortcut icon" href="css/stickers/icon.png" type="image/x-icon">
 </head>
 <body>
     <div class="header">
@@ -35,7 +36,11 @@
             <p>Senha</p>
             <input type="password" id="ipt_login_senha" class="login_senha" placeholder="Insira sua senha"> <br>
             <button onclick="entrar()" class="btn_login">Entrar</button>
+            <div id="div_aguardar" class="loading-div">
+                <img src="./assets/imgs/loading.gif" id="loading-gif">
+            </div>
         </div>
+        
         <div id="erro_login" class="erro-login" style="display: none;"></div>
     </div>
     <div id="footer" class="footer_page">
@@ -53,6 +58,7 @@
         if(emailVar == "" || senhaVar == ""){
             erro_login.style.display = 'block';
             erro_login.innerHTML = `Por favor preencha todos os campos corretamente`
+            finalizarAguardar();
         }else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1){
             erro_login.style.display = 'block';
             erro_login.innerHTML = `Email inválido`

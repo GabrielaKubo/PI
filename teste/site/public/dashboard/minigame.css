@@ -111,3 +111,20 @@ a:before {
 
    font-size: 20px;
 }
+/* FOOTER */
+.footer_page{
+   height: 10vh;
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   justify-content: space-evenly;
+   font-size: 20px;
+   background-color:#030303;
+   color: white;
+}
+.by{
+   font-size: 15px;
+}
+   

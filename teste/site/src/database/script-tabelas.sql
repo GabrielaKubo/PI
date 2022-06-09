@@ -41,23 +41,23 @@ foreign key (fkPersonagem) references Personagens(idPersonagem)
 );
  
 
-
-
+UPDATE Usuario SET fkFilmes = 1  WHERE idUsuario = 1;
+UPDATE Usuario SET fkPersonagem = 2 WHERE idUsuario = 1;
  
 INSERT INTO Filmes VALUES
-(null, 'Nausicaä do Vale do Vento', '1984', 'Hayao Miyazaki'),
+(null, 'Nausicaä', '1984', 'Hayao Miyazaki'),
 (null, 'O Castelo no Céu', '1986', 'Hayao Miyazaki'),
 (null, 'Meu Amigo Totoro', '1988', 'Hayao Miyazaki'),
 (null, 'Túmulo dos Vagalumes', '1988', 'Hayao Miyazaki'),
 (null, 'O Serviço de Entregas da Kiki', '1989', 'Hayao Miyazaki'),
-(null, 'Porco Rosso: O Último Herói Romântico', '1992', 'Hayao Miyazaki'),
+(null, 'Porco Rosso', '1992', 'Hayao Miyazaki'),
 (null, 'Princesa Mononoke', '1997', 'Hayao Miyazaki'),
 (null, 'A Viagem de Chihiro', '2001', 'Hayao Miyazaki'),
 (null, 'O Castelo Animado', '2004', 'Hayao Miyazaki'),
-(null, 'Ponyo: Uma Amizade Que Veio do Mar ', '2008', 'Hayao Miyazaki'),
+(null, 'Ponyo', '2008', 'Hayao Miyazaki'),
 (null, 'Vidas ao Vento', '2013', 'Hayao Miyazaki');
  
- drop table Personagens;
+
  INSERT INTO Personagens VALUES
  (null, 'Kushana', 'feminino', 1),
  (null, 'Nausicaa', 'feminino', 1),
@@ -71,8 +71,8 @@ INSERT INTO Filmes VALUES
  (null, 'Mei Kusakabe', 'feminino', 3),
  (null, 'Satsuki Kusakabe', 'feminino', 3),
  (null, 'Catbus', 'criatura mágica', 3),
- (null, 'Seita', 'masculino', 3),
- (null, 'Setsuko', 'feminino', 3),
+ (null, 'Seita', 'masculino', 4),
+ (null, 'Setsuko', 'feminino', 4),
  (null, 'Jiji', 'criatura mágica', 5),
  (null, 'Tombo', 'masculino', 5),
  (null, 'Ursula', 'feminino', 5),
@@ -117,12 +117,24 @@ INSERT INTO Filmes VALUES
 
 INSERT INTO Usuario (idUsuario, nomeUser, email, senha, fkFilmes, fkPersonagem) Values
  (null, 'Gabriela','gabriela@email','123',7 , 23);
- 
- 
- select * from Filmes;
- select * from Personagens;
- select * from Distribuidora;
- 
- select * from Filmes JOIN Personagens ON Filmes.idFilmes = Personagens.ax_filmes JOIN Usuario ON Filmes.idFilmes = Usuario.fkFilmes;
- select * from Usuario as u JOIN Filmes as f on u.fkFilmes=f.idFilmes JOIN Personagens as p ON u.fkPersonagem=p.idPersonagem WHERE idUsuario = 1;
- select * from Usuario as u JOIN Filmes as f on u.fkFilmes=f.idFilmes JOIN Personagens as p ON u.fkPersonagem=p.idPersonagem WHERE idUsuario = 1;
+ INSERT INTO Usuario (idUsuario, nomeUser, email, senha, fkFilmes, fkPersonagem) Values
+ (null, 'Akemi','Akemi@email','123',1 , 11),
+ (null, 'victor','victor@email','123',4 , 1),
+ (null, 'maria','maria@email','123',2 , 20),
+ (null, 'lily','lily@email','123',11 , 2),
+ (null, 'poki','poki@email','123',3 , 3),
+ (null, 'julia','julia@email','123',5 , 5),
+ (null, 'silvia','silvia@email','123',6 , 40),
+ (null, 'sergio','sergio@email','123',8 , 32),
+ (null, 'felipe','felipe@email','123',10 , 12),
+ (null, 'leo','leo@email','123',2 , 21),
+ (null, 'yuji','yuji@email','123',1 , 33),
+ (null, 'kenzo','kenzo@email','123',1 , 19),
+ (null, 'namie','namie@email','123',10 , 16),
+ (null, 'luana','luana@email','123',3 , 14),
+ (null, 'kimi','kimi@email','123',3 , 7),
+ (null, 'mana','mana@email','123',1 , 9),
+ (null, 'edu','edu@email','123',5 , 11),
+ (null, 'vini','vini@email','123',5 , 10),
+ (null, 'lilian','lilian@email','123',6 , 3),
+ (null, 'sandra','sandra@email','123',9 , 17);

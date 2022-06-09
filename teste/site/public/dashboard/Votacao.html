@@ -12,13 +12,13 @@
         rel="stylesheet">
     <link rel="icon" href="galeria-filmes/makurokurosuke.gif">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <script src="../dashboard/votacao.js"></script> -->
     <script src="../dashboard/votacao.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="shortcut icon" href="galeria-filmes/icon.png" type="image/x-icon">
 
 </head>
 
-<body onload="validarSessao(), obterDadosGrafico(), MostrarKPI(), buscarMedidasEmTempoReal(), MostrarKPI()">
+<body onload="validarSessao(), obterDadosGrafico(),  buscarMedidasEmTempoReal()">
     <div class="header_votacao">
         <div class="div_logo">
             <h1 class="japones-logo">ジブリと間 </h1>
@@ -35,14 +35,17 @@
     </ul>
     </div>
     <div class="container">
+        <div class="voto_conteudo">
+        <h1>Votação</h1>
         <div id="kpi" class="cards">
             <div class="card_total">
                 Total de votos:
-                <p id="temp_aquario_1">0</p>
+                <p id="total_votos">0</p>
             </div>
             <div class="top1">
                 TOP 1:
-                <p id="top1">0</p>
+                <p id="nome_filme" class="nome_filme"></p>
+                <p id="primeiro_lugar" class="top1_filme">0</p>
             </div>
         </div>
         <div class="graficos">
@@ -51,6 +54,11 @@
             </div>
         </div>
     </div>
+</div>
+<div id="footer" class="footer_page">
+    <div>Feito com carinho por um aluno da SPTech.</div>
+    <div class="by">By: Gabriela Akemi Kubo</div>
+</div>
 </body>
 
 </html>
@@ -58,6 +66,7 @@
     let proximaAtualizacao;
 
     window.onload = obterDadosGrafico(1);
+    window.onload = obterdadosdaKPI(1);
     
 
     // b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
